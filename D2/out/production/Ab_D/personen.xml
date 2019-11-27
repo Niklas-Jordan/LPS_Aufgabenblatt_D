@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<personen>
+    <person id="1">
+        <name>Mustermann</name>
+        <vorname>Max</vorname>
+        <geburtsdatum>25.11.1983</geburtsdatum>
+        <postleitzahl>54321</postleitzahl>
+        <ort>Bierdorf</ort>
+        <lieblingsgericht>Nudeln</lieblingsgericht>
+        <hobby>Laufen</hobby>
+        <lieblingsband>Tote Hosen</lieblingsband>
+    </person>
+    <person id="2">
+        <name>Müller</name>
+        <vorname>Petra</vorname>
+        <geburtsdatum>13.04.1990</geburtsdatum>
+        <postleitzahl>76543</postleitzahl>
+        <ort>Bierdorf</ort>
+        <lieblingsgericht>Spagehtti</lieblingsgericht>
+        <hobby>Zocken</hobby>
+        <lieblingsband>Rammstein</lieblingsband>
+    </person>
+</personen>
