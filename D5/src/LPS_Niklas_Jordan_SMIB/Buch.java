@@ -134,17 +134,17 @@ public class Buch extends Medium {
         }
 
         // validate field isbn
-        if (this.isbn == null || this.isbn.trim().equals("")) {
+        if (this.isbn == null || this.isbn.trim().isBlank()) {
             throw new ValidationException("empty ISBN not allowed");
         }
 
         // validate field verfasser
-        if (this.verfasser == null || this.verfasser.trim().equals("")) {
+        if (this.verfasser == null || this.verfasser.trim().isBlank()) {
             throw new ValidationException("empty verfasser not allowed");
         }
 
         // validate field verlag
-        if (this.verlag == null || this.verlag.trim().equals("")) {
+        if (this.verlag == null || this.verlag.trim().isBlank()) {
             throw new ValidationException("empty verlag not allowed");
         }
     }
