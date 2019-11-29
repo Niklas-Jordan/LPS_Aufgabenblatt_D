@@ -23,6 +23,7 @@ public class WebsiteRequest {
     }
 
     private static Website readPageInfo(String title) throws Exception {
+        Website website = new Website();
         XMLReader xmlReader = XMLReaderFactory.createXMLReader();
         WebsiteContentHandler pageInfoContentHandler = new WebsiteContentHandler();
         xmlReader.setContentHandler(pageInfoContentHandler);

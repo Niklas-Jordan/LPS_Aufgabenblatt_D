@@ -22,13 +22,13 @@ public class WebsiteContentHandler implements ContentHandler {
 
     public void startElement(String uri, String localname, String qName, Attributes atts) throws SAXException {
         switch (localname) {
-            case "website":
+            case "page":
                 website = new Website();
                 break;
-            case "daten":
+            case "revision":
                 websiteDaten = new WebsiteDaten();
                 break;
-            case "request":
+            case "contributor":
                 websiteUserData = new WebsiteUserData();
                 break;
         }
@@ -51,7 +51,7 @@ public class WebsiteContentHandler implements ContentHandler {
         } else if (websiteDaten != null) {
             switch (localName) {
                 case "timestamp":
-                    SimpleDateFormat datum = new SimpleDateFormat("dd.MM.yyyy 'T' HH : mm : ss 'Z'");
+                    SimpleDateFormat datum = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
                     try {
                         Date date = datum.parse(currentValue);
                         websiteDaten.setTimestamp(date);
