@@ -3,12 +3,16 @@ package LPS_Niklas_Jordan_SMIB;
 import org.xml.sax.Attributes;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.Locator;
-import org.xml.sax.SAXException;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * The type Website content handler.
+ * überprüft ob Username, IP, timestamps und Contributor gegeben sind
+ *
+ */
 public class WebsiteContentHandler implements ContentHandler {
 
     private String currentValue;
@@ -16,11 +20,11 @@ public class WebsiteContentHandler implements ContentHandler {
     private WebsiteDaten websiteDaten = null;
     private WebsiteUserData websiteUserData = null;
 
-    public void characters(char[] ch, int start, int length) throws SAXException {
+    public void characters(char[] ch, int start, int length) {
         currentValue = new String(ch, start, length);
     }
 
-    public void startElement(String uri, String localname, String qName, Attributes atts) throws SAXException {
+    public void startElement(String uri, String localname, String qName, Attributes atts) {
         switch (localname) {
             case "page":
                 website = new Website();
@@ -34,7 +38,7 @@ public class WebsiteContentHandler implements ContentHandler {
         }
     }
 
-    public void endElement(String uri, String localName, String qName) throws SAXException {
+    public void endElement(String uri, String localName, String qName) {
         if (websiteUserData != null) {
             switch (localName) {
                 case "ip":
@@ -73,6 +77,13 @@ public class WebsiteContentHandler implements ContentHandler {
         }
     }
 
+    /**
+     * Gets website.
+     * überprüft, ob eine URL gegeben ist und greift auf diese zu
+     * wenn keine URL gegeben ist, wiedergabe der Fehlermeldung
+     * @return the website
+     * @throws Exception the exception
+     */
     public Website getWebsite() throws Exception {
         if (website == null) {
             throw new Exception("Website nicht gefunden");
@@ -80,27 +91,27 @@ public class WebsiteContentHandler implements ContentHandler {
         return website;
     }
 
-    public void endDocument() throws SAXException {
+    public void endDocument() {
     }
 
-    public void endPrefixMapping(String prefix) throws SAXException {
+    public void endPrefixMapping(String prefix) {
     }
 
-    public void ignorableWhitespace(char[] ch, int start, int length) throws SAXException {
+    public void ignorableWhitespace(char[] ch, int start, int length) {
     }
 
-    public void processingInstruction(String target, String data) throws SAXException {
+    public void processingInstruction(String target, String data) {
     }
 
     public void setDocumentLocator(Locator locator) {
     }
 
-    public void skippedEntity(String name) throws SAXException {
+    public void skippedEntity(String name) {
     }
 
-    public void startDocument() throws SAXException {
+    public void startDocument() {
     }
 
-    public void startPrefixMapping(String prefix, String uri) throws SAXException {
+    public void startPrefixMapping(String prefix, String uri) {
     }
 }
