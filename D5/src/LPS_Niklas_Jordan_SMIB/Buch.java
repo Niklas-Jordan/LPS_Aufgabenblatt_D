@@ -157,7 +157,6 @@ public class Buch extends Medium {
      * @return true für gültig, false für ungültig
      */
     public static boolean checkISBN(String isbn) {
-        // TODO: more cleanup
         isbn = isbn.replace("-", "");
         isbn = isbn.replace("‐", "");
         isbn = isbn.replace(" ", "");

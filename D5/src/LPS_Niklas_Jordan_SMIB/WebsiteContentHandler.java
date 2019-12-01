@@ -11,8 +11,7 @@ import java.util.Date;
 /**
  * In Zusammenarbeit mit Florian Eimann
  * The type Website content handler.
- * überprüft ob Username, IP, timestamps und Contributor gegeben sind
- *
+ * setzt Username, IP, timestamps und Contributor wenn gegeben
  */
 public class WebsiteContentHandler implements ContentHandler {
 
@@ -20,6 +19,7 @@ public class WebsiteContentHandler implements ContentHandler {
     private Website website = null;
     private WebsiteDaten websiteDaten = null;
     private WebsiteUserData websiteUserData = null;
+    private WikiBuch wikiBuch = null;
 
     public void characters(char[] ch, int start, int length) {
         currentValue = new String(ch, start, length);
@@ -29,17 +29,28 @@ public class WebsiteContentHandler implements ContentHandler {
         switch (localname) {
             case "page":
                 website = new Website();
-                break;
-            case "revision":
                 websiteDaten = new WebsiteDaten();
                 break;
             case "contributor":
                 websiteUserData = new WebsiteUserData();
                 break;
+            case "text":
+                wikiBuch = new WikiBuch();
+                break;
         }
     }
 
     public void endElement(String uri, String localName, String qName) {
+        if (wikiBuch != null) {
+            switch (localName) {
+                case "text":
+                    wikiBuch.setRegal(currentValue);
+                    websiteDaten.setSpeicher(wikiBuch);
+                    wikiBuch.setKapitel(currentValue);
+                    wikiBuch = null;
+                    break;
+            }
+        }
         if (websiteUserData != null) {
             switch (localName) {
                 case "ip":

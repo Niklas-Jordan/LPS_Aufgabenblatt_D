@@ -27,7 +27,7 @@ public class WebsiteRequest {
         URL url = new URL("https://de.wikibooks.org/wiki/Spezial:Exportieren/" + title);
         URLConnection connection = url.openConnection();
         // user-agent nicht nötig zu setzten, kann man aber machen
-        // connection.setRequestProperty("User-Agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3");
+        connection.setRequestProperty("User-Agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3");
         connection.setDoInput(true);
         InputStream inputStream = connection.getInputStream();
         InputSource inputSource = new InputSource(inputStream);

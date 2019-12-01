@@ -6,13 +6,33 @@ import java.util.Date;
 /**
  * In Zusammenarbeit mit Florian Eimann
  * The type Website daten.
- *  revision
- * @Override gibt Urheber und Änderungszeitpunkt aus, wenn dieser vorhanden ist
+ * revision
+ *
+ * @Override Stringbuilder für Autor, Änderungszeit und Speicherort
  */
 public class WebsiteDaten {
 
     private Date timestamp;
     private WebsiteUserData contributor;
+    private WikiBuch speicher;
+
+    /**
+     * Gets speicher.
+     *
+     * @return the speicher
+     */
+    public WikiBuch getSpeicher() {
+        return speicher;
+    }
+
+    /**
+     * Sets speicher.
+     *
+     * @param speicher the speicher
+     */
+    public void setSpeicher(WikiBuch speicher) {
+        this.speicher = speicher;
+    }
 
     /**
      * Gets contributor.
@@ -53,6 +73,6 @@ public class WebsiteDaten {
     @Override
     public String toString() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy 'um' HH : mm 'Uhr' (z)");
-        return "Urheber: " + this.contributor + System.lineSeparator() + "Letzte Änderung: " + dateFormat.format(timestamp);
+        return speicher + "\nUrheber: " + this.contributor + System.lineSeparator() + "Letzte Änderung: " + dateFormat.format(timestamp);
     }
 }
