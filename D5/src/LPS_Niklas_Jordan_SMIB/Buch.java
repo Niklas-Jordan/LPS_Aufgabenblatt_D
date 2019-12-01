@@ -9,6 +9,7 @@ public class Buch extends Medium {
     private String isbn;
 
     /**
+     * Aufgabenblatt C von Jasper Roloff
      * Gibt das Erscheinungsjahr des Buches zurück
      *
      * @return Erscheinungsjahr des Buches

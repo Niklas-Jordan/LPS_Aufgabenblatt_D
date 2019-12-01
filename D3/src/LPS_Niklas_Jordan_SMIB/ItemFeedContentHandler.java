@@ -4,6 +4,11 @@ import org.xml.sax.Attributes;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.Locator;
 
+/**
+ *
+ * Grundaufbau übernommen aus der Vorlesung
+ * The type Item feed content handler.
+ */
 public class ItemFeedContentHandler implements ContentHandler {
 
 

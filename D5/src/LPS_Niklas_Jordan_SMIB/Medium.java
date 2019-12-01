@@ -6,6 +6,7 @@ public abstract class Medium implements Comparable<Medium>, Serializable {
     private String titel;
 
     /**
+     * Aufgabenblatt C von Jasper Roloff
      * Gibt den Titel des Mediums zurück
      * @return Titel des Mediums
      */

@@ -10,6 +10,7 @@ public class Zettelkasten implements Iterable<Medium>, Serializable {
     private ArrayList<Medium> mediumArrayList = new ArrayList<>();
 
     /**
+     * Aufgabenblatt C von Jasper Roloff
      * add's a medium instance
      * @param medium the Medium instance to add
      * @throws Medium.ValidationException

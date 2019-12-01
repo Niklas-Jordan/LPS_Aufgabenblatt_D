@@ -2,6 +2,9 @@ package LPS_Niklas_Jordan_SMIB;
 
 import java.io.*;
 
+/**
+ * The type Binary persistency.
+ */
 public class BinaryPersistency implements Persistency {
 
     @Override

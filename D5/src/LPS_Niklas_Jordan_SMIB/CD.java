@@ -8,6 +8,7 @@ public class CD extends Medium {
     private String kuenstler;
 
     /**
+     * Aufgabenblatt C von Jasper Roloff
      * Gibt den Künstler der CD zurück
      * @return Künstler der CD
      */

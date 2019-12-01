@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
+ * In Zusammenarbeit mit Florian Eimann
  * The type Website daten.
  *  revision
  * @Override gibt Urheber und Änderungszeitpunkt aus, wenn dieser vorhanden ist

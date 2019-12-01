@@ -9,6 +9,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 /**
+ * In Zusammenarbeit mit Florian Eimann
  * The type Website request.
  */
 public class WebsiteRequest {

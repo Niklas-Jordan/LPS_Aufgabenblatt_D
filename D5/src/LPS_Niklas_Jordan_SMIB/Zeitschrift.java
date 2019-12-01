@@ -7,6 +7,7 @@ public class Zeitschrift extends Medium {
     private Integer nummer;
 
     /**
+     * Aufgabenblatt C von Jasper Roloff
      * Gibt die Nummer der Zeitschrift zurück
      * @return Nummer der Zeitschrift
      */

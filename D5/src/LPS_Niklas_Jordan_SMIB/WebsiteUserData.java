@@ -1,6 +1,7 @@
 package LPS_Niklas_Jordan_SMIB;
 
 /**
+ * In Zusammenarbeit mit Florian Eimann
  * The type Website user data.
  * Im @Override wird überprüft ob Username und oder IP vorhanden ist und dann ausgegeben, bzw entsprechende Fehlermeldung ausgegeben
  */
@@ -48,12 +49,12 @@ public class WebsiteUserData {
     public String toString() {
         if (username == null && ip == null) {
             return "Fehler kein Benutzer vorhanden!";
-        } else if (ip != null) {
+        } else if (ip != null && username == null) {
             return ip + "IP";
-        } else if (username != null) {
+        } else if (username != null && ip == null) {
             return username;
         } else {
-            return ip + "von" + username;
+            return "IP: " + this.ip + "von Benutzer: " + this.username;
         }
     }
 }

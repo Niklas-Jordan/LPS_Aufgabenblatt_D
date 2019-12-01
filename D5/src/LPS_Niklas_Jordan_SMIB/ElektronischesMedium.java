@@ -15,6 +15,7 @@ public class ElektronischesMedium extends Medium {
     }
 
     /**
+     * Aufgabenblatt C von Jasper Roloff
      * Setzt die URL des elektronischen Mediums
      * @param url URL
      */

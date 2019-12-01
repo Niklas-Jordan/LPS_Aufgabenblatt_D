@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
+ * In Zusammenarbeit mit Florian Eimann
  * The type Website content handler.
  * überprüft ob Username, IP, timestamps und Contributor gegeben sind
  *
